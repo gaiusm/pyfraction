@@ -13,6 +13,7 @@ and string output methods.
 
 * How can users get started with the project
 
+```bash
 $ git clone https://github.com/gaiusm/pyfraction
 $ cd pyfraction
 $ mkdir build
@@ -20,6 +21,9 @@ $ cd build
 $ ../configure --prefix=$HOME/opt
 $ make
 $ ./localrun.sh ../testfract.py
+```
+
+```
 PI =  3 1/7
 one = 1
 two = 2
@@ -36,6 +40,7 @@ result = 1
 10
 60 * 10 = 600
 6/7 * 3/8 = 9/28
+```
 
 * Who maintains and contributes to the project
 
