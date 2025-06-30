@@ -1,0 +1,8 @@
+This project forks the fraction modules from the pge project.
+
+The fraction code base dates back to 2010 and is used by pge to populate
+its game engine world.  This project adds a Python3 interface to
+the Modula-2 fraction module.  The Modula-2 code base handles all the
+fraction arithmetic and also the garbage collection.
+
+Version 0.1  The initial checkin.

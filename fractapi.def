@@ -1,0 +1,125 @@
+DEFINITION MODULE fractapi ;
+
+(*
+    Title      : fractapi
+    Author     : Gaius Mulley
+    System     : GNU Modula-2
+    Date       : Wed Aug 21 01:00:21 2024
+    Revision   : $Version$
+    Description: provides a basic C base types interface for the Fractions module.
+                 This can be automatically converted by swig into a Python module.
+*)
+
+EXPORT UNQUALIFIED Constructor, Decon, SetValue,
+                   GetWhole, GetDenominator, GetNumerator,
+                   PI, Add, Sub, Div, Mult, Negate,
+                   IsPositive, IsNegative, IsEqual ;
+
+
+(*
+   Constructor - construct a new fraction with the value whole, numerator and denominator.
+*)
+
+PROCEDURE Constructor (whole, numerator, denominator: LONGCARD) : CARDINAL ;
+
+
+(*
+   Decon - free the fraction in slot no.
+*)
+
+PROCEDURE Decon (no: CARDINAL) ;
+
+
+(*
+   SetValue - unroots slot no and creates a new fraction with the value
+              whole, numerator and denominator in slot no.
+*)
+
+PROCEDURE SetValue (no: CARDINAL; whole, numerator, denominator: LONGCARD) ;
+
+
+(*
+   GetWhole - returns the whole number from slot no.
+*)
+
+PROCEDURE GetWhole (no: CARDINAL) : LONGCARD ;
+
+
+(*
+   GetDenominator - returns the denominator from slot no.
+*)
+
+PROCEDURE GetDenominator (no: CARDINAL) : LONGCARD ;
+
+
+(*
+   GetNumerator - returns the numerator from slot no.
+*)
+
+PROCEDURE GetNumerator (no: CARDINAL) : LONGCARD ;
+
+
+(*
+   PI - returns a special fraction representing pi.
+*)
+
+PROCEDURE PI () : CARDINAL ;
+
+
+(*
+   Add - return a new fraction containing the value left + right.
+*)
+
+PROCEDURE Add (left, right: CARDINAL) : CARDINAL ;
+
+
+(*
+   Sub - return a new fraction containing the value left - right.
+*)
+
+PROCEDURE Sub (left, right: CARDINAL) : CARDINAL ;
+
+
+(*
+   IsPositive - return TRUE if fraction no >= 0.
+*)
+
+PROCEDURE IsPositive (no: CARDINAL) : BOOLEAN ;
+
+
+(*
+   IsNegative - return TRUE if fraction no < 0.
+*)
+
+PROCEDURE IsNegative (no: CARDINAL) : BOOLEAN ;
+
+
+(*
+   IsEqual - return TRUE if fraction left = right.
+*)
+
+PROCEDURE IsEqual (left, right: CARDINAL) : BOOLEAN ;
+
+
+(*
+   Div - return a new fraction containing the value left/right.
+*)
+
+PROCEDURE Div (left, right: CARDINAL) : CARDINAL ;
+
+
+(*
+   Mult - return a new fraction containing the value left * right.
+*)
+
+PROCEDURE Mult (left, right: CARDINAL) : CARDINAL ;
+
+
+(*
+   Negate - returns a new fraction containing -x.
+*)
+
+PROCEDURE Negate (x: CARDINAL) : CARDINAL ;
+
+
+END fractapi.
